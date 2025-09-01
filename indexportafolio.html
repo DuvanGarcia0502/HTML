@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio personal</title>
+</head>
+<body>
+    <header>
+     <main>
+        <h1>Portafolio Personal</h1>
+        
+       <form action="/enviar" method="post">
+
+          <input name="nombre" placeholder="Nombre" required minlength="2" autocomplete="name"><br>
+
+          <input name="email" type="email" placeholder="Email" required autocomplete="email" inputmode="email"><br>
+
+          <input name="telefono" type="tel" placeholder="Teléfono"
+             pattern="[0-9+\-()\s]{7,20}" title="7–20 dígitos y + - ( )" autocomplete="tel" inputmode="tel"><br>
+
+         <button type="submit">Enviar</button>
+       </form>
+       <section id="blog">
+        <h2>Blog</h2>
+        <article>
+         <h3>Mi primer post</h3>
+           <p>Contenido principal del blog</p>
+           <aside>Formulario rapido<img src="formulario.png" alt="EJEMPLO DEL FORMULARIO" width="100"></aside>
+        </article>
+      </section>
+      <section id="media">
+        <h2>Multimedia</h2>
+        <ul>
+          <li>
+          <video controls width="200">
+          <source src="Video.mp4" type="video/mp4">
+          </video>
+          </li>
+         <li>
+         <audio controls>
+         <source src="Audio.mp3" type="audio/mpeg">
+         </audio>
+        </li>
+       </ul>
+       </section>
+       <section id="shop">
+         <h2>Productos</h2>
+         <form action="/pedido" method="post">
+          <table border="1">
+           <tr>
+            <th>SKU</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cant.</th>
+           </tr>
+           <tr>
+            <td>PRODUCTO1</td>
+            <td>Arroz</td>
+            <td>2000</td>
+            <td><input type="number" name="items[P001]" min="0" value="0"></td>
+           </tr>
+           <tr>
+            <td>PRODUCTO2</td><td>PAN</td><td>1000</td>
+            <td><input type="number" name="items[P002]" min="0" value="0"></td>
+           </tr>
+          </table>
+          <button type="submit">TOTAL</button><br><br>
+        </form>
+       </section>
+     </main>
+     <footer>
+      <a href="#top">Volver arriba</a>
+      <a href="https://buscaminas.eu/" target="_blank">Sorpresa</a>
+     </footer>
+    </header>
+</body>
+</html>
